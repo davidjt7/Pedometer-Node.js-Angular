@@ -1,0 +1,197 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Pedometer API",
+    "description": "APIs for Pedometer",
+    "version": "1.0.0"
+  },
+  "host": "localhost:8080",
+  "basePath": "/",
+  "schemes": ["http"],
+  "consumes": [],
+  "produces": [],
+  "paths": {
+    "/teams": {
+      "get": {
+        "tags": ["Teams"],
+        "description": "List all counters",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/teams/{teamName}": {
+      "post": {
+        "tags": ["Teams"],
+        "description": "Create team counter",
+        "parameters": [
+          {
+            "name": "teamName",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "example": "Blue"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "get": {
+        "tags": ["Teams"],
+        "description": "Get team counter",
+        "parameters": [
+          {
+            "name": "teamName",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "example": "Blue"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/teams/{teamName}/users/{userName}": {
+      "post": {
+        "tags": ["Users"],
+        "description": "Add user with counter to team",
+        "parameters": [
+          {
+            "name": "teamName",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "example": "Blue"
+          },
+          {
+            "name": "userName",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "example": "Thor"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "get": {
+        "tags": ["Users"],
+        "description": "Get user team counter",
+        "parameters": [
+          {
+            "name": "teamName",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "example": "Blue"
+          },
+          {
+            "name": "userName",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "example": "Thor"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "put": {
+        "tags": ["Users"],
+        "description": "Increment user team counter",
+        "parameters": [
+          {
+            "name": "teamName",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "example": "Blue"
+          },
+          {
+            "name": "userName",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "example": "Thor"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {}
+}

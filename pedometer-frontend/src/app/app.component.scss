@@ -1,0 +1,33 @@
+.header {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.padLeft {
+  padding-left: 10pt;
+}
+
+.padRight {
+  padding-right: 10pt;
+}
+
+.teams {
+  display: flex;
+  flex-direction: row;
+}
+
+.users {
+  display: flex;
+  flex-direction: row;
+}
+
+.team {
+  margin: 10pt;
+}
+
+svg#clouds {
+  position: fixed;
+  bottom: -160px;
+  left: 130px;
+  z-index: -10;
+  width: 1920px;
+}
